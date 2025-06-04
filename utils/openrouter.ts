@@ -2,8 +2,8 @@ export async function callOpenRouter(messages: any, model: string) {
   const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
     method: "POST",
     headers: {
+      Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
       "Content-Type": "application/json",
-      "Authorization": `Bearer ${process.env.OPENROUTER_API_KEY}`,
       "HTTP-Referer": "https://shaz-qiai-v2.vercel.app/" // atau domain kamu
     },
     body: JSON.stringify({
