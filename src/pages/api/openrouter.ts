@@ -1,10 +1,9 @@
-// pages/api/openrouter.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { callOpenRouter } from "../../../utils/openrouter";
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<any>
+  res: NextApiResponse<unknown>
 ) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Only POST allowed" });
