@@ -5,7 +5,7 @@ export async function callOpenRouter(messages: any[], model = "deepseek-chat") {
     headers: {
       "Authorization": `Bearer ${process.env.OPENROUTER_API_KEY}`,
       "Content-Type": "application/json",
-      "HTTP-Referer": "https://shazqi.ai",
+      "HTTP-Referer": "https://shaz-qiai-v2.vercel.app/",
       "X-Title": "ShazQI AI v2"
     },
     body: JSON.stringify({
