@@ -10,7 +10,7 @@ export default function Home() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        model: "deepseek-chat",
+        model: "deepseek-ai/deepseek-chat",
         messages: [
           { role: "system", content: "You are a helpful assistant." },
           { role: "user", content: input },
