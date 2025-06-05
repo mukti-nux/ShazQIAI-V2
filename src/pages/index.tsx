@@ -1,4 +1,3 @@
-// pages/index.tsx
 import { useState } from "react";
 
 export default function Home() {
@@ -6,11 +5,11 @@ export default function Home() {
   const [response, setResponse] = useState("");
 
   const handleSend = async () => {
-    const res = await fetch("/api/openrouter", {
+    const res = await fetch("/api/deepseek", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        model: "deepseek-ai/deepseek-chat",
+        model: "deepseek-chat",
         messages: [
           { role: "system", content: "You are a helpful assistant." },
           { role: "user", content: input },
